@@ -9,21 +9,23 @@ export class QuizPageComponent {
   title = 'Quiz Page';
 
   constructor() {
-
+    var buttonSelection = []
+    var buttons;
   }
 
-  addToButtonArray() {
+  addToButtonArray(buttons) {
     // onClick, add button selection to Array.
+    // figure out how to identify the button selected, and push into the array
 
+    // buttons.push()
   }
 
-  checkNumberOfButtonSelected(buttons) {
-
+  checkNumberOfButtonSelected(buttonSelection) {
     // get 'buttons parameter' from addToButtonArray() function,
     // check to make sure that number in buton array is equal to 3 before   
     // enableShowMeButton() function is called. 
 
-    // if (buttons) == 3; {
+    // if (buttons.length) == 3; {
     //   this.enableShowMeButton();
     // }
 
@@ -33,14 +35,13 @@ export class QuizPageComponent {
     // once 3 buttons have been selected, enable this button to be clicked
   }
 
-
-  enableResetButton(buttons) {
+  enableResetButton(buttonSelection) {
     // once at least one button has been clicked, call resetAllButtons() function
   }
 
-  resetAllButtons(buttons) {
+  resetAllButtons(buttonSelection) {
     //reset all selected buttons back to their original state
-    // if (buttons) >= 1
+    // if (buttons.length) >= 1
   }
 
   showMeResult() {
