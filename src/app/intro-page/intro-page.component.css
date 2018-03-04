@@ -1,0 +1,25 @@
+.header img{
+    width: 100%;
+}
+
+.type {
+    margin-top: 10%;
+    margin-bottom: 3%;
+    width: 400px;
+    padding-top: 20px;
+}
+
+.line {
+    margin-top: 10%;
+    margin-bottom: 3%;
+    padding: 0;
+    margin-left: 15%;
+}
+
+.line img {
+    float: right;
+}
+
+.logo {
+    margin-top: 5%;
+}
