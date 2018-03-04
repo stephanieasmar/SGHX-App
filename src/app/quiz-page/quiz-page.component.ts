@@ -13,6 +13,19 @@ export class QuizPageComponent {
     var buttons;
   }
 
+
+
+  setButtonEnabledClass() {
+    // on button click, enable button "on" images
+
+  }
+
+  setButtonDisabledClass() {
+    // on click of reset button, set buttons as "off/disabled"
+
+  }
+
+
   addToButtonArray(buttons) {
     // onClick, add button selection to Array.
     // figure out how to identify the button selected, and push into the array
@@ -36,12 +49,17 @@ export class QuizPageComponent {
   }
 
   enableResetButton(buttonSelection) {
-    // once at least one button has been clicked, call resetAllButtons() function
+    // once at least one button has been clicked, enable reset button
+    // if (buttonSelection.length) >= 1; {
+
+    // }
   }
 
+
   resetAllButtons(buttonSelection) {
-    //reset all selected buttons back to their original state
-    // if (buttons.length) >= 1
+    //on reset button click, reset buttonSelection array to 0, reset button images to "off" state
+    buttonSelection = 0;
+    this.setButtonDisabledClass()
   }
 
   showMeResult() {
