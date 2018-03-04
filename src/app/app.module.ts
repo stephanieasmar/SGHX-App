@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { IntroPageComponent } from './intro-page/intro-page.component';
 import { QuizPageComponent } from './quiz-page/quiz-page.component';
+import { IntroPageComponent } from './intro-page/intro-page.component';
 
 const appRoutes: Routes = [
-  { path: 'intro', component: IntroPageComponent },
+  { path: '', component: IntroPageComponent },
   { path: 'archetype-seeker', component: QuizPageComponent },
 ];
 
