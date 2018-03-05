@@ -4,7 +4,7 @@
 
   <div class="col-sm-12 archetype-wrapper">
       <div class="row">
-          <div class="col-sm-2 independence" *ngIf="isSelected == false"><img src="assets/ValueBtn_independence_off.png" alt="independence"></div>
+          <div class="col-sm-2 independence" (click)="itemClicked()" *ngIf="isSelected == false"><img src="assets/ValueBtn_independence_off.png" alt="independence"></div>
           <div class="col-sm-2 independence" *ngIf="isSelected != false"><img src="assets/ValueBtn_independence_on.png" alt="independence"></div>
 
           <div class="col-sm-2 contribution"><img src="assets/ValueBtn_contribution_off.png" alt="contribution"></div>
@@ -24,7 +24,7 @@
           <div class="col-sm-2 simplicity"><img src="assets/ValueBtn_simplicity_off.png" alt="simplicity"></div>
         </div>
         <div class="row">
-          <div class="col-sm-3 reset"><img src="assets/ResetBtn.png" alt="reset"></div>
+          <div class="col-sm-3 reset" (click)="resetQuiz()"><img src="assets/ResetBtn.png" alt="reset"></div>
           <div class="col-sm-3 show-me"><img src="assets/Show_Btn.png" alt="show-me"></div>
         </div>
   </div>

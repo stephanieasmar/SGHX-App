@@ -16,9 +16,9 @@ export class QuizPageComponent {
     this.isSelected = false;
   }
 
-  // itemSelected() {
-  //   this.isSelected = true;
-  // }
+  itemClicked() {
+    this.isSelected = true;
+  }
 
   addItemToArray(items) {
 
@@ -37,31 +37,14 @@ export class QuizPageComponent {
     //   this.enableShowMeButton();
     // }
 
-  }
+    // else alert('Please choose 3 options')
 
-  enableShowMeButton() {
-    // once 3 buttons have been selected, enable this button to be clicked
-  }
-
-  enableResetButton(itemSelection) {
-    // once at least one button has been clicked, enable reset button
-    if (itemSelection.length >= 1) {
-
-
-    }
   }
 
   resetQuiz() {
     this.isSelected = false;
     this.itemSelection = [];
   }
-
-
-  // resetAllButtons(buttonSelection) {
-  //   //on reset button click, reset buttonSelection array to 0, reset button images to "off" state
-  //   buttonSelection = 0;
-  //   this.selected = false;
-  // }
 
   showMeResult() {
 
