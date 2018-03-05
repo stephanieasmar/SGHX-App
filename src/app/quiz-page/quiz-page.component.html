@@ -4,31 +4,31 @@
 
   <div class="col-sm-12 archetype-wrapper">
       <div class="row">
-          <div class="col-sm-2" (click)="getItemClickedInfo($event)" *ngIf="isSelected == false"><img src="assets/ValueBtn_independence_off.png" id="independence" alt="independence"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event) *ngIf="isSelected == false"><img src="assets/ValueBtn_independence_off.png" id="independence" alt="independence"></div>
           <div class="col-sm-2" *ngIf="isSelected != false"><img src="assets/ValueBtn_independence_on.png" alt="independence"></div>
 
-          <div class="col-sm-2" (click)="getItemClickedInfo($event)" *ngIf="isSelected == false"><img src="assets/ValueBtn_contribution_off.png" id="contribution" alt="contribution"></div>
-          <div class="col-sm-2" *ngIf="isSelected != false"><img src="assets/ValueBtn_contribution_on.png" alt="contribution"></div>
-
-
-          <div class="col-sm-2 spirituality"><img src="assets/ValueBtn_spirituality_off.png" alt="spirituality"></div>
-          <div class="col-sm-2 enjoyment"><img src="assets/ValueBtn_enjoyment_off.png" alt="enjoyment"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_contribution_off.png" id="contribution" alt="contribution"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_spirituality_off.png" id="spirituality" alt="spirituality"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_enjoyment_off.png" id="enjoyment" alt="enjoyment"></div>
         </div>
         <div class="row">
-          <div class="col-sm-2 education"><img src="assets/ValueBtn_education_off.png" alt="education"></div>
-          <div class="col-sm-2 security"><img src="assets/ValueBtn_security_off.png" alt="security"></div>
-          <div class="col-sm-2 creativity"><img src="assets/ValueBtn_creativity_off.png" alt="creativity"></div>
-          <div class="col-sm-2 connection"><img src="assets/ValueBtn_connection_off.png" alt="connection"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event) *ngIf="isSelected == false"><img src="assets/ValueBtn_education_off.png" id="education" alt="education"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event) *ngIf="isSelected != false"><img src="assets/ValueBtn_education_on.png" alt="education"></div>
+          
+          
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_security_off.png" id="security" alt="security"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_creativity_off.png" id="creativity" alt="creativity"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_connection_off.png" id="connection" alt="connection"></div>
         </div>
         <div class="row">
-          <div class="col-sm-2 adventure"><img src="assets/ValueBtn_adventure_off.png" alt="adventure"></div>
-          <div class="col-sm-2 knowledge"><img src="assets/ValueBtn_knowledge_off.png" alt="knowledge"></div>
-          <div class="col-sm-2 determination"><img src="assets/ValueBtn_determination_off.png" alt="determination"></div>
-          <div class="col-sm-2 simplicity"><img src="assets/ValueBtn_simplicity_off.png" alt="simplicity"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_adventure_off.png" id="adventure" alt="adventure"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_knowledge_off.png" id="knowledge" alt="knowledge"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_determination_off.png" id="determination" alt="determination"></div>
+          <div class="col-sm-2" (click)=getItemClickedInfo($event)><img src="assets/ValueBtn_simplicity_off.png" id="simplicity" alt="simplicity"></div>
         </div>
         <div class="row">
-          <div class="col-sm-3 reset" (click)="resetQuiz()"><img src="assets/ResetBtn.png" alt="reset"></div>
-          <div class="col-sm-3 show-me"><img src="assets/Show_Btn.png" alt="show-me"></div>
+          <div class="col-sm-3 reset" (click)=resetQuiz()><img src="assets/ResetBtn.png" alt="reset"></div>
+          <div class="col-sm-3 show-me" (click)=showMeResult()><img src="assets/Show_Btn.png" alt="show-me"></div>
         </div>
   </div>
 </div>
