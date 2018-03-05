@@ -16,12 +16,9 @@ export class QuizPageComponent {
     this.isSelected = false;
   }
 
-  itemSelected() {
-    this.isSelected = true;
-
-
-
-  }
+  // itemSelected() {
+  //   this.isSelected = true;
+  // }
 
   addItemToArray(items) {
 
@@ -48,9 +45,15 @@ export class QuizPageComponent {
 
   enableResetButton(itemSelection) {
     // once at least one button has been clicked, enable reset button
-    // if (buttonSelection.length) >= 1; {
+    if (itemSelection.length >= 1) {
 
-    // }
+
+    }
+  }
+
+  resetQuiz() {
+    this.isSelected = false;
+    this.itemSelection = [];
   }
 
 

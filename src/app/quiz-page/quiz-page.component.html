@@ -4,8 +4,8 @@
 
   <div class="col-sm-12 archetype-wrapper">
       <div class="row">
-          <div class="col-sm-2 independence" ng-if="isSelected == false"><img src="assets/ValueBtn_independence_off.png" alt="independence"></div>
-          <div class="col-sm-2 independence" ng-if="isSelected != false"><img src="assets/ValueBtn_independence_on.png" alt="independence"></div>
+          <div class="col-sm-2 independence" *ngIf="isSelected == false"><img src="assets/ValueBtn_independence_off.png" alt="independence"></div>
+          <div class="col-sm-2 independence" *ngIf="isSelected != false"><img src="assets/ValueBtn_independence_on.png" alt="independence"></div>
 
           <div class="col-sm-2 contribution"><img src="assets/ValueBtn_contribution_off.png" alt="contribution"></div>
           <div class="col-sm-2 spirituality"><img src="assets/ValueBtn_spirituality_off.png" alt="spirituality"></div>
