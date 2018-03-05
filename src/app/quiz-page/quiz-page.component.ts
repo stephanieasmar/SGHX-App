@@ -10,15 +10,28 @@ export class QuizPageComponent {
   itemSelection = [];
   items: any;
   isSelected: boolean;
+  // independence: boolean;
+  // contribution: boolean;
 
   constructor() {
-    console.log('Constructor Initialized');
     this.isSelected = false;
+    // this.independence = false;
+    // this.contribution = false;
   }
 
-  itemClicked() {
-    this.isSelected = true;
+  itemClicked($event) {
+    console.log($event); 
+    // this.'event payload here' = true;
   }
+
+  // independenceClicked() {
+  //   this.independence = true;
+  // }
+
+  // contributionClicked() {
+  //   this.contribution = true;
+  // }
+
 
   addItemToArray(items) {
 
@@ -43,6 +56,8 @@ export class QuizPageComponent {
 
   resetQuiz() {
     this.isSelected = false;
+    // this.independence = false;
+    // this.contribution = false;
     this.itemSelection = [];
   }
 
