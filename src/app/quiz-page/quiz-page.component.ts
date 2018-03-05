@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 export class QuizPageComponent {
 
   itemSelection = [];
-  items: any;
+  choices: any;
   isSelected: boolean;
+  itemId: any;
   // independence: boolean;
   // contribution: boolean;
 
@@ -19,26 +20,22 @@ export class QuizPageComponent {
     // this.contribution = false;
   }
 
-  itemClicked($event) {
-    console.log($event); 
-    // this.'event payload here' = true;
+  // createItemArray(itemId) {
+  //   var itemSelection = [];
+  //   itemSelection.push(itemId);
+  //   console.log(itemSelection);
+  // }
+
+
+  getItemClickedInfo($event) {
+    var itemId = $event.target.id;
+    this.itemSelection.push(itemId);
+    console.log(this.itemSelection);
+    return this.itemSelection;
   }
 
-  // independenceClicked() {
-  //   this.independence = true;
-  // }
-
-  // contributionClicked() {
-  //   this.contribution = true;
-  // }
-
-
-  addItemToArray(items) {
-
-    // onClick, add button selection to Array.
-    // figure out how to identify the button selected, and push into the array
-
-    // buttons.push()
+  disableItem(itemId) {
+    this.isSelected = true;
   }
 
   checkNumberOfItemsSelected(itemSelection) {
@@ -56,29 +53,11 @@ export class QuizPageComponent {
 
   resetQuiz() {
     this.isSelected = false;
-    // this.independence = false;
-    // this.contribution = false;
     this.itemSelection = [];
+    console.log(this.itemSelection);
   }
 
   showMeResult() {
 
   }
 }
-
-
-
-
-
-
-
-
-
-//  IDEAS: On button select, add button number to an Array;
-//         Do not allow more than 3 items in the array at any one time.
-
-//         On 'Show Me' button click, take that array and run an 'Archetype Checker' function;
-//         run 'if' statements, or compare to a CSV file on the backend; then, based on results, 
-//         route to the appropriate archetype display page.
-
-//         Reset button selection

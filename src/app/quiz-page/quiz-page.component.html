@@ -4,11 +4,11 @@
 
   <div class="col-sm-12 archetype-wrapper">
       <div class="row">
-          <div class="col-sm-2 independence" (click)="itemClicked($event)" *ngIf="isSelected == false"><img src="assets/ValueBtn_independence_off.png" alt="independence"></div>
-          <div class="col-sm-2 independence" *ngIf="isSelected != false"><img src="assets/ValueBtn_independence_on.png" alt="independence"></div>
+          <div class="col-sm-2" (click)="getItemClickedInfo($event)" *ngIf="isSelected == false"><img src="assets/ValueBtn_independence_off.png" id="independence" alt="independence"></div>
+          <div class="col-sm-2" *ngIf="isSelected != false"><img src="assets/ValueBtn_independence_on.png" alt="independence"></div>
 
-          <div class="col-sm-2 contribution" (click)="contributionClicked()" *ngIf="contribution == false"><img src="assets/ValueBtn_contribution_off.png" alt="contribution"></div>
-          <div class="col-sm-2 contribution" *ngIf="contribution != false"><img src="assets/ValueBtn_contribution_on.png" alt="contribution"></div>
+          <div class="col-sm-2" (click)="getItemClickedInfo($event)" *ngIf="isSelected == false"><img src="assets/ValueBtn_contribution_off.png" id="contribution" alt="contribution"></div>
+          <div class="col-sm-2" *ngIf="isSelected != false"><img src="assets/ValueBtn_contribution_on.png" alt="contribution"></div>
 
 
           <div class="col-sm-2 spirituality"><img src="assets/ValueBtn_spirituality_off.png" alt="spirituality"></div>
