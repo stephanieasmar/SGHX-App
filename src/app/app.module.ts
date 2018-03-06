@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';

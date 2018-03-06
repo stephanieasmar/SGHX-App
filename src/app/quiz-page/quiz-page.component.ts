@@ -14,18 +14,35 @@ export class QuizPageComponent {
   isSelected: boolean;
   itemId: any;
   checkedNumber: boolean;
+  archetypeData = [];
 
 
   constructor() {
     this.isSelected = false;
     this.checkedNumber = false;
+
+    // this.archetypeData = ["creativity", "connection", "knowledge"];
+
+    this.archetypeData = [
+
+      {
+        "First Value": "Creativity",
+        "Second Value": "Independence",
+        "Third Value": "Contribution",
+        "Archetype": "Team Motivator"
+      },
+      {
+        "First Value": "Creativity",
+        "Second Value": "Independence",
+        "Third Value": "Enjoyment",
+        "Archetype": "Rule Breaker"
+      }
+    ]
   }
 
-  //DONE
   selectItem($event) {
     var itemId = $event.target.id;
     this.itemSelection.push(itemId); //pushes items into
-
     if (this.itemSelection.length >= 3) {
       this.itemSelection.splice(3, 1); //keeps array at max 3 items
     }
@@ -33,8 +50,6 @@ export class QuizPageComponent {
     this.isSelected = true;
   }
 
-
-  //DONE
   checkNumberOfItemsSelected(itemSelection) {
     if (this.itemSelection.length > 3) {
       alert('Too many values chosen. Please RESET');
@@ -43,8 +58,6 @@ export class QuizPageComponent {
     } else this.checkedNumber = true;
   }
 
-
-  //DONE
   resetQuiz() {
     this.isSelected = false;
     this.checkedNumber = false;
@@ -58,13 +71,19 @@ export class QuizPageComponent {
 //Just need to add navigation to this
   showMeResult(itemSelection) {
     var results = this.itemSelection;
-    this.checkNumberOfItemsSelected(results);
-    alert('This is what you chose:' + results);
-    return results;
+    this.checkNumberOfItemsSelected(results);    
+    var datas = this.archetypeData;
+    var archResult;
+    for (let data in datas) {
+      if(results[0]==datas[data]["First Value"]&&results[1]==datas[data]["Second Value"]&&results[2]==datas[data]["Third Value"]) {
+        console.log(datas[data]["Archetype"]);
+        return(datas[data]["Archetype"]);
+      }
+    };
   }
-
-
 }
+
+
 
 
 
