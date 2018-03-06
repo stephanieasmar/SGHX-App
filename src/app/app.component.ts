@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Injectable } from '@angular/core';
+import { BrowserModule }    from '@angular/platform-browser';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -22,12 +23,17 @@ export class ArchetypeService {
 export class AppComponent implements OnInit {
 
   archetypes = [];
+  error: any;
 
   constructor(private _archetypeService: ArchetypeService){}
 
   ngOnInit() {
     this._archetypeService.getArchetypes()
-      .subscribe(resArchetypesData => this.archetypes = resArchetypesData);
+      .subscribe(
+        resArchetypesData => this.archetypes = resArchetypesData, //success paths
+        error => this.error = error // error path
+      ); 
+     
   }
 
 
