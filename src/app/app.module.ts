@@ -2,10 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { Component} from '@angular/core';
+import { Injectable } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
+import { ArchetypeService } from './archetype.service';
 
 const appRoutes: Routes = [
   { path: '', component: IntroPageComponent },
@@ -16,7 +21,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     IntroPageComponent,
-    QuizPageComponent
+    QuizPageComponent,
   ],
   imports: [
     RouterModule.forRoot(
@@ -24,9 +29,10 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [ArchetypeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

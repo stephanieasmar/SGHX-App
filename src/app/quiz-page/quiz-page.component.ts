@@ -1,44 +1,53 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CATCH_STACK_VAR } from '@angular/compiler/src/output/output_ast';
 import { navigationCancelingError } from '@angular/router/src/shared';
+import { ArchetypeService } from '../archetype.service';
 
 @Component({
   selector: 'quiz-page',
+  providers: [ ArchetypeService ],
   templateUrl: './quiz-page.component.html',
   styleUrls: ['./quiz-page.component.css']
 })
-export class QuizPageComponent {
+export class QuizPageComponent implements OnInit {
 
   itemSelection = [];
-  choices: any;
   isSelected: boolean;
   itemId: any;
   checkedNumber: boolean;
   archetypeData = [];
+  archetypes = [];
+  error: any;
 
 
-  constructor() {
+  constructor(private _archetypeService: ArchetypeService) {
     this.isSelected = false;
     this.checkedNumber = false;
+  };
 
-    // this.archetypeData = ["creativity", "connection", "knowledge"];
-
-    this.archetypeData = [
-
-      {
-        "First Value": "Creativity",
-        "Second Value": "Independence",
-        "Third Value": "Contribution",
-        "Archetype": "Team Motivator"
-      },
-      {
-        "First Value": "Creativity",
-        "Second Value": "Independence",
-        "Third Value": "Enjoyment",
-        "Archetype": "Rule Breaker"
-      }
-    ]
+  ngOnInit() {
+    this._archetypeService.getJSONDataAsync('../assets/data/archetypes.json').then(data => {
+      this.setQueryOptionsData(data);
+      console.log(data);
+    });
+    
   }
+
+      // var archetypes = this._archetypeService.getArchetypeData()
+    // console.log(this.archetypes);
+
+    setQueryOptionsData(data) {
+      this.archetypes = data.archetypes;
+    }
+
+
+    // this._archetypeService.getArchetypeData()
+    //   .subscribe(
+    //     archetypeData => this.archetypes = archetypeData, //success paths
+    //     error => this.error = error // error path
+    //   ); 
+    //   console.log(this.archetypeData);
+  
 
   selectItem($event) {
     var itemId = $event.target.id;
@@ -73,7 +82,6 @@ export class QuizPageComponent {
     var results = this.itemSelection;
     this.checkNumberOfItemsSelected(results);    
     var datas = this.archetypeData;
-    var archResult;
     for (let data in datas) {
       if(results[0]==datas[data]["First Value"]&&results[1]==datas[data]["Second Value"]&&results[2]==datas[data]["Third Value"]) {
         console.log(datas[data]["Archetype"]);
@@ -90,6 +98,5 @@ export class QuizPageComponent {
 // TO DO:
 
 // Import CSV File - 2 hrs
-// Write result functions - 2 hrs
 // Figure out result navigation - 2hrs
-// Figure out b=item disabling - 2 hrs
+// Figure out item disabling - 2 hrs
