@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CATCH_STACK_VAR } from '@angular/compiler/src/output/output_ast';
+import { navigationCancelingError } from '@angular/router/src/shared';
 
 @Component({
   selector: 'quiz-page',
@@ -11,15 +13,16 @@ export class QuizPageComponent {
   choices: any;
   isSelected: boolean;
   itemId: any;
-  checkedNumber: boolean = false;
+  checkedNumber: boolean;
 
 
   constructor() {
     this.isSelected = false;
+    this.checkedNumber = false;
   }
 
   //DONE
-  getItemClickedInfo($event) {
+  selectItem($event) {
     var itemId = $event.target.id;
     this.itemSelection.push(itemId); //pushes items into
 
@@ -27,12 +30,6 @@ export class QuizPageComponent {
       this.itemSelection.splice(3, 1); //keeps array at max 3 items
     }
 
-    console.log(this.itemSelection);
-    return this.itemSelection;
-  }
-
-//NEEDS WORK
-  disableItem(itemId) {
     this.isSelected = true;
   }
 
@@ -52,7 +49,6 @@ export class QuizPageComponent {
     this.isSelected = false;
     this.checkedNumber = false;
     this.itemSelection = [];
-    console.log(this.itemSelection);
   }
 
   navigateToArchetype() {
@@ -63,9 +59,18 @@ export class QuizPageComponent {
   showMeResult(itemSelection) {
     var results = this.itemSelection;
     this.checkNumberOfItemsSelected(results);
-    console.log(results);
+    alert('This is what you chose:' + results);
     return results;
   }
 
 
 }
+
+
+
+// TO DO:
+
+// Import CSV File - 2 hrs
+// Write result functions - 2 hrs
+// Figure out result navigation - 2hrs
+// Figure out b=item disabling - 2 hrs
