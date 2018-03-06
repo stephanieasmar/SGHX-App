@@ -10,29 +10,29 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./app.component.css']
 })
 
-@Injectable()
-export class ArchetypeService {
-  private _url= 'assets/archetypes.json';
-  constructor(private _http: Http) {}
-  getArchetypes () {
-    return this._http.get(this._url)
-      .map((response: Response) => response.json());
-  }
-}
+// @Injectable()
+// export class ArchetypeService {
+//   private _url= 'assets/archetypes.json';
+//   constructor(private _http: Http) {}
+//   getArchetypes () {
+//     return this._http.get(this._url)
+//       .map((response: Response) => response.json());
+//   }
+// }
 
 export class AppComponent implements OnInit {
 
-  archetypes = [];
-  error: any;
+  // archetypes = [];
+  // error: any;
 
-  constructor(private _archetypeService: ArchetypeService){}
+  // constructor(private _archetypeService: ArchetypeService){}
 
   ngOnInit() {
-    this._archetypeService.getArchetypes()
-      .subscribe(
-        resArchetypesData => this.archetypes = resArchetypesData, //success paths
-        error => this.error = error // error path
-      ); 
+    // this._archetypeService.getArchetypes()
+    //   .subscribe(
+    //     resArchetypesData => this.archetypes = resArchetypesData, //success paths
+    //     error => this.error = error // error path
+    //   ); 
      
   }
 
