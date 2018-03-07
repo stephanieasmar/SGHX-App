@@ -13,13 +13,13 @@ import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
 
 //archetype Components
-import { RuleBreakerComponent } from './archetype-results/rule-breaker/rule-breaker.component';
-import { PerpetualDreamerComponent } from './archetype-results/perpetual-dreamer/perpetual-dreamer.component';
-import { TeamMotivatorComponent } from './archetype-results/team-motivator/team-motivator.component';
-import { RuleFollowerComponent } from './archetype-results/rule-follower/rule-follower.component';
-import { ComfortSeekerComponent } from './archetype-results/comfort-seeker/comfort-seeker.component';
-import { InsightsGathererComponent } from './archetype-results/insights-gatherer/insights-gatherer.component';
-import { SocialConnectorComponent } from './archetype-results/social-connector/social-connector.component';
+import { RuleBreakerComponent } from './archetype-results/rule-breaker.component';
+import { PerpetualDreamerComponent } from './archetype-results/perpetual-dreamer.component';
+import { TeamMotivatorComponent } from './archetype-results/team-motivator.component';
+import { RuleFollowerComponent } from './archetype-results/rule-follower.component';
+import { ComfortSeekerComponent } from './archetype-results/comfort-seeker.component';
+import { InsightsGathererComponent } from './archetype-results/insights-gatherer.component';
+import { SocialConnectorComponent } from './archetype-results/social-connector.component';
 
 //services
 import { ArchetypeService } from './archetype.service';
