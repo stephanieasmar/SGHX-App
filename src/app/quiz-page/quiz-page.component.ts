@@ -15,14 +15,14 @@ import {ActivatedRoute} from "@angular/router";
 export class QuizPageComponent implements OnInit {
 
   itemSelection = [];
-  isSelected: boolean;
-  itemId: any;
-  checkedNumber: boolean;
   archetypeData = [];
+  itemId: any;
   error: any;
   archetypeResult: any;
   resultReturned: boolean;
-  routeParam: any;
+  checkedNumber: boolean;
+  isSelected: boolean;
+
 
   constructor(private _archetypeService: ArchetypeService, private route: ActivatedRoute, private router: Router) {
     this.isSelected = false;
@@ -35,6 +35,7 @@ export class QuizPageComponent implements OnInit {
       this.setQueryOptionsData(data);
     });
   }
+
 //reassigns response data to global property; 
 //doing this in sepearate function to make sure 
 //that data has been loaded before variable is assigned
@@ -45,7 +46,7 @@ export class QuizPageComponent implements OnInit {
   //pushed user selection into array property
   selectItem($event) {
     var itemId = $event.target.id;
-    this.itemSelection.push(itemId); //pushes items into
+    this.itemSelection.push(itemId); //pushes items into array
     if (this.itemSelection.length >= 3) {
       this.itemSelection.splice(3, 1); //keeps array at max 3 items
     }
@@ -80,7 +81,7 @@ export class QuizPageComponent implements OnInit {
 
   navigateToArchetype(archetypeResult) {
     console.log(archetypeResult);
-    if(this.archetypeResult == 'Rule Breaker') {
+    if (this.archetypeResult == 'Rule Breaker') {
       this.router.navigate(['archetype-seeker/rule-breaker']);   
     } else if (this.archetypeResult == 'Perpetual Dreamer') {
       this.router.navigate(['archetype-seeker/perpetual-dreamer']);  
@@ -101,7 +102,6 @@ export class QuizPageComponent implements OnInit {
 
   showMeResult(itemSelection) {
     var results = this.itemSelection;
-    // console.log(results);
     this.checkNumberOfItemsSelected(results);
     this.checkIfValidOptions(results);    
     var datas = this.archetypeData;
