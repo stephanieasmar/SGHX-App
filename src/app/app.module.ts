@@ -15,7 +15,16 @@ import { ArchetypeService } from './archetype.service';
 const appRoutes: Routes = [
   { path: '', component: IntroPageComponent },
   { path: 'archetype-seeker', component: QuizPageComponent },
+
+  // { path: 'archetype-seeker/rule-breaker', component: },
+  // { path: 'archetype-seeker/perpetual-dreamer', component:   },
+  // { path: 'archetype-seeker/team-motivator', component:   },
+  // { path: 'archetype-seeker/rule-follower', component:   },
+  // { path: 'archetype-seeker/comfort-seeker', component: },
+  // { path: 'archetype-seeker/insights-gatherer', component:   },
+  // { path: 'archetype-seeker/social-connector', component:   }
 ];
+
 
 @NgModule({
   declarations: [
@@ -26,6 +35,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
+      // archetypeRoutes
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule,

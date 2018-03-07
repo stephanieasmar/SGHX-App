@@ -12,7 +12,7 @@ export class ArchetypeService {
   // private _url= 'assets/data/archetypes.json'; //might be wrong filepath
   constructor(private _http: Http) {}
 
-  //gets data with a promise, which willr eturn with the data once the task is complete.
+  //gets data with a promise, which will return with the data once the task is complete.
   public getJSONDataAsync(filePath: string) : Promise<any> {
     return new Promise((resolve, reject) => {
       this._http.get(filePath)
@@ -21,15 +21,10 @@ export class ArchetypeService {
           if(!res.ok) {
             return("Failed with the status:" + res.status + "\nTrying to find file at:" + filePath);
           }
-
           var jsonRes = res.json();
-
           resolve(jsonRes);
-
         }
-      
       );
-
     }).catch(reason => this.handleError(reason));
   }
 
@@ -45,19 +40,6 @@ export class ArchetypeService {
     }
     console.error(errMsg);
     return Observable.throw(errMsg);
-
   }
-
-
-
-
-
-
-
-
-  // getArchetypeData() {
-  //   return this._http.get(this._url)
-  //     .map((response: Response) => response.json());
-  // }
 }
 
