@@ -3,6 +3,7 @@ import { CATCH_STACK_VAR } from '@angular/compiler/src/output/output_ast';
 import { navigationCancelingError } from '@angular/router/src/shared';
 import { ArchetypeService } from '../archetype.service';
 import { Router } from '@angular/router';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'quiz-page',
@@ -21,8 +22,9 @@ export class QuizPageComponent implements OnInit {
   error: any;
   archetypeResult: any;
   resultReturned: boolean;
+  routeParam: any;
 
-  constructor(private _archetypeService: ArchetypeService, private router: Router) {
+  constructor(private _archetypeService: ArchetypeService, private route: ActivatedRoute, private router: Router) {
     this.isSelected = false;
     this.checkedNumber = false;
     this.resultReturned = false;
@@ -77,13 +79,24 @@ export class QuizPageComponent implements OnInit {
   }
 
   navigateToArchetype(archetypeResult) {
-    var routeParam = this.archetypeResult;
-    var lowerCaseParam = routeParam.toLowerCase();
-    var splitParam = lowerCaseParam.split(" ");
-    var archetypeParam = splitParam[0] + "-" + splitParam[1];
-    console.log(archetypeParam);
-
-    // this.router.navigate(['archetype-seeker'], archetypeParam);    
+    console.log(archetypeResult);
+    if(this.archetypeResult == 'Rule Breaker') {
+      this.router.navigate(['archetype-seeker/rule-breaker']);   
+    } else if (this.archetypeResult == 'Perpetual Dreamer') {
+      this.router.navigate(['archetype-seeker/perpetual-dreamer']);  
+    } else if (this.archetypeResult == 'Team Motivator') {
+      this.router.navigate(['archetype-seeker/perpetual-dreamer']);  
+    } else if (this.archetypeResult == 'Rule Follower') {
+      this.router.navigate(['archetype-seeker/rule-follower']);  
+    } else if (this.archetypeResult == 'Comfort Seeker') {
+      this.router.navigate(['archetype-seeker/comfort-seeker']);  
+    } else if (this.archetypeResult == 'Insights Gatherer') {
+      this.router.navigate(['archetype-seeker/insights-gatherer']);  
+    } else if (this.archetypeResult == 'Social Connector') {
+      this.router.navigate(['archetype-seeker/social-connector']);  
+    } else {
+      alert('Error. Please RESET and begin again');
+    }
   }
 
   showMeResult(itemSelection) {
@@ -105,9 +118,3 @@ export class QuizPageComponent implements OnInit {
   }
 
 }
-
-
-
-
-// Figure out result navigation - 2hrs
-// Figure out item disabling - 2 hrs
