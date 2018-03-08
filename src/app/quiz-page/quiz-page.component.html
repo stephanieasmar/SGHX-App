@@ -3,27 +3,24 @@
   <div class="top3values"><img src="assets/images/top3values.png" alt="top3values"></div>
 
   <div class="col-sm-12 archetype-wrapper">
-      <div class="row 1">
-          <div class="col-sm-2 line1"><img src="assets/images/independence_off.png" id="Independence" alt="independence"></div>
-      
-          <div class="col-sm-2"><img src="assets/images/contribution_off.png" id="Contribution" alt="contribution"></div>
-
-          <div class="col-sm-2" (click)="selectItem($event)" *ngIf="isSelected == false"><img src="assets/images/spirit_off.png" id="Spirituality" alt="spirituality"></div>
-          <div class="col-sm-2" *ngIf="isSelected != false"><img src="assets/images/spirit_on.png"></div>
-
-          <div class="col-sm-2 line1" (click)=selectItem($event)><img src="assets/images/enjoyment_off.png" id="Enjoyment" alt="enjoyment"></div>
+      <div class="row">
+          <div class="col-sm-2" (click)="selectItem($event)"><img src="assets/images/independence_off.png" id="Independence" alt="independence"></div>
+          
+          
+          <div class="col-sm-2" (click)="selectItem($event)"><img src="assets/images/contribution_off.png" id="Contribution" alt="contribution"></div>
+          <div class="col-sm-2" (click)="selectItem($event)"><img src="assets/images/spirit_off.png" id="Spirituality" alt="spirituality"></div>
+          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/enjoyment_off.png" id="Enjoyment" alt="enjoyment"></div>
         </div>
-        <div class="row">
-          <div class="col-sm-2 line1" (click)=selectItem($event)><img src="assets/images/education_off.png" id="Education" alt="education"></div>
 
-          
-          
+        <div class="row">
+          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/education_off.png" id="Education" alt="education"></div>
           <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/security_off.png" id="Security" alt="security"></div>
           <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/creativity_off.png" id="Creativity" alt="creativity"></div>
           <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/connection_off.png" id="Connection" alt="connection"></div>
         </div>
+
         <div class="row">
-          <div class="col-sm-2 line1" (click)=selectItem($event)><img src="assets/images/adventure_off.png" id="Adventure" alt="adventure"></div>
+          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/adventure_off.png" id="Adventure" alt="adventure"></div>
           <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/knowledge_off.png" id="Knowledge" alt="knowledge"></div>
           <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/determination_off.png" id="Determination" alt="determination"></div>
           <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/simplicity_off.png" id="Simplicity" alt="simplicity"></div>
@@ -34,6 +31,6 @@
       <img src="assets/images/Shape.png" id="recycle" alt="recycle">
       <img src="assets/images/RESET.png" alt="reset">
     </div>
-    <div class="col-sm-3 show-me" (click)=showMeResult()><img src="assets/images/Show.png" alt="show-me"></div>
+    <div class="col-sm-3 show-me" (click)=showMeResult() *ngIf="isSelected"><img src="assets/images/Show.png" alt="show-me"></div>
   </div>
 </div>

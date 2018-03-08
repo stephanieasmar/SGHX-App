@@ -5,7 +5,7 @@ import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'team-motivator',
   template: `
-  <div class="col-sm-12 start-over" (click)=startOver()>
+  <div class="col-sm-12 start-over">
     <div class="row">
       <div class="col-sm-7 result">
         <div class="youare"><img src="assets/images/YouAre.png"></div>

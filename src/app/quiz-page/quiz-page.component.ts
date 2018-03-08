@@ -23,12 +23,17 @@ export class QuizPageComponent implements OnInit {
   resultReturned: boolean;
   checkedNumber: boolean;
   isSelected: boolean;
+  IndependenceOff: boolean;
+  IndependenceOn: boolean;
+  btnClicked: boolean;
 
 
   constructor(private _archetypeService: ArchetypeService, private route: ActivatedRoute, private router: Router) {
     this.isSelected = false;
     this.checkedNumber = false;
     this.resultReturned = false;
+    this.btnClicked = false;
+
   };
 
   ngOnInit() {
@@ -53,12 +58,20 @@ export class QuizPageComponent implements OnInit {
     if (this.itemSelection.length >= 3) {
       this.itemSelection.splice(3, 1); //keeps array at max 3 items
     }
+    this.showShowMeButton(this.itemSelection);
   }
 
+  showShowMeButton(itemSelection) {
+    if(this.itemSelection.length == 3) {
+      this.isSelected = true;
+    }
+  }
+ 
   //super hacky :(
   disableValueButtons(itemId) {
-    if (this.itemId == "spirituality" ) {
-      this.isSelected = true;
+    if (this.itemId == "Independence") {
+      this.btnClicked = true;
+
     }
   }
 
