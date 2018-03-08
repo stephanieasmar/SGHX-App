@@ -11,11 +11,10 @@ import {ActivatedRoute} from "@angular/router";
         <div class="youare"><img src="assets/images/YouAre.png"></div>
         <div class="archetype"><img src="assets/images/PerpetualDreamer.png"></div>
       </div>
-      <div class="col-sm-5 paragraph">
-      
-      </div>
-      <div class="row">
-      <div class=" col-sm-2 restart" (click)=startOver()> 
+      <div class="col-sm-5 paragraph"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 restart" (click)=startOver()> 
         <img src="assets/images/StartOver.png">
       </div>
     </div>

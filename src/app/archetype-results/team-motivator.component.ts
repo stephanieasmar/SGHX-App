@@ -14,14 +14,15 @@ import {ActivatedRoute} from "@angular/router";
       <div class="col-sm-5 paragraph">
       
       </div>
+      </div>
       <div class="row">
-      <div class=" col-sm-2 restart" (click)=startOver()> 
-        <img src="assets/images/StartOver.png">
+        <div class="col-sm-2 restart" (click)=startOver()> 
+          <img src="assets/images/StartOver.png">
+        </div>
       </div>
     </div>
-  </div>
-  `,
-  styles: ['.result { padding-left: 10%; }', '.archetype { margin-top: 10%; }', '.youare { margin-top: 10%; margin-left: 27.5% }', '.restart { margin-left: 90% ; margin-top: 2% }']
+    `,
+    styles: ['.result { padding-left: 10%; }', '.archetype { margin-top: 10%; }', '.youare { margin-top: 10%; margin-left: 27.5% }', '.restart { margin-left: 90% ; margin-top: 2% }']
 })
 export class TeamMotivatorComponent {
   title = 'Team Motivator';
