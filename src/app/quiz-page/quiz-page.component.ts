@@ -4,6 +4,7 @@ import { navigationCancelingError } from '@angular/router/src/shared';
 import { ArchetypeService } from '../archetype.service';
 import { Router } from '@angular/router';
 import {ActivatedRoute} from "@angular/router";
+import { NgIf, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'quiz-page',
@@ -46,11 +47,19 @@ export class QuizPageComponent implements OnInit {
   //pushed user selection into array property
   selectItem($event) {
     var itemId = $event.target.id;
+    console.log(itemId);
+    this.disableValueButtons(itemId);
     this.itemSelection.push(itemId); //pushes items into array
     if (this.itemSelection.length >= 3) {
       this.itemSelection.splice(3, 1); //keeps array at max 3 items
     }
-    this.isSelected = true;
+  }
+
+  //super hacky :(
+  disableValueButtons(itemId) {
+    if (this.itemId == "spirituality" ) {
+      this.isSelected = true;
+    }
   }
 
   checkNumberOfItemsSelected(itemSelection) {
@@ -102,6 +111,7 @@ export class QuizPageComponent implements OnInit {
 
   showMeResult(itemSelection) {
     var results = this.itemSelection;
+    console.log(results);
     this.checkNumberOfItemsSelected(results);
     this.checkIfValidOptions(results);    
     var datas = this.archetypeData;
@@ -109,7 +119,7 @@ export class QuizPageComponent implements OnInit {
       if(results[0]==datas[data]["First Value"]&&results[1]==datas[data]["Second Value"]&&results[2]==datas[data]["Third Value"]) {
         this.archetypeResult = datas[data]["Archetype"];
         this.resultReturned = true;
-        // console.log(this.archetypeResult);
+        console.log(this.archetypeResult);
       }
     };
     if (this.resultReturned = true) {

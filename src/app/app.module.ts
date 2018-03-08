@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { NgIf, CommonModule } from '@angular/common';
 import { Component} from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 //components
 import { AppComponent } from './app.component';
@@ -60,6 +61,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     HttpModule,
+    CommonModule
   ],
   providers: [ArchetypeService],
   bootstrap: [AppComponent]
