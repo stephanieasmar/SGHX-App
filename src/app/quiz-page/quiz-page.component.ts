@@ -21,19 +21,41 @@ export class QuizPageComponent implements OnInit {
   error: any;
   archetypeResult: any;
   resultReturned: boolean;
-  checkedNumber: boolean;
+  checkedNumber: boolean
   isSelected: boolean;
   IndependenceOff: boolean;
   IndependenceOn: boolean;
-  btnClicked: boolean;
-
+  ContributionOff: boolean;
+  ContributionOn: boolean;
+  Independence: boolean;
+  Contribution: boolean;
+  Spirituality: boolean;
+  Enjoyment: boolean;
+  Education: boolean;
+  Security: boolean;
+  Creativity: boolean;
+  Connection: boolean;
+  Adventure: boolean;
+  Knowledge: boolean;
+  Determination: boolean;
+  Simplicity: boolean;
 
   constructor(private _archetypeService: ArchetypeService, private route: ActivatedRoute, private router: Router) {
     this.isSelected = false;
     this.checkedNumber = false;
     this.resultReturned = false;
-    this.btnClicked = false;
-
+    this.Independence = true;
+    this.Contribution = true;
+    this.Spirituality = true;
+    this.Enjoyment = true;
+    this.Education = true;
+    this.Security = true;
+    this.Creativity = true;
+    this.Connection  = true;
+    this.Adventure = true;
+    this.Knowledge = true;
+    this.Determination = true;
+    this.Simplicity = true;
   };
 
   ngOnInit() {
@@ -51,14 +73,46 @@ export class QuizPageComponent implements OnInit {
 
   //pushed user selection into array property
   selectItem($event) {
-    var itemId = $event.target.id;
-    console.log(itemId);
-    this.disableValueButtons(itemId);
+    this.itemId = $event.target.id;
+    this.disableValueButtons(this.itemId);
+    this.createItemArray(this.itemId);
+    this.showShowMeButton(this.itemSelection);
+  }
+
+  disableValueButtons(itemId) {
+    if (this.itemId == "Independence") {
+      this.Independence = false;
+    } else if(this.itemId == "Contribution") {
+      this.Contribution = false;
+    } else if(this.itemId == "Spirituality") {
+      this.Spirituality = false;
+    } else if(this.itemId == "Enjoyment") {
+      this.Enjoyment = false;
+    } else if(this.itemId == "Education") {
+      this.Education = false;
+    } else if(this.itemId == "Security") {
+      this.Security = false;
+    } else if(this.itemId == "Creativity") {
+      this.Creativity = false;
+    } else if(this.itemId == "Connection") {
+      this.Connection = false;
+    } else if(this.itemId == "Adventure") {
+      this.Adventure = false;
+    } else if(this.itemId == "Knowledge") {
+      this.Knowledge = false;
+    } else if(this.itemId == "Determination") {
+      this.Determination = false;
+    } else if(this.itemId == "Simplicity") {
+      this.Simplicity = false;
+    } 
+  }
+    
+  createItemArray(itemId) {
     this.itemSelection.push(itemId); //pushes items into array
+    console.log(this.itemSelection);
     if (this.itemSelection.length >= 3) {
       this.itemSelection.splice(3, 1); //keeps array at max 3 items
     }
-    this.showShowMeButton(this.itemSelection);
   }
 
   showShowMeButton(itemSelection) {
@@ -66,39 +120,43 @@ export class QuizPageComponent implements OnInit {
       this.isSelected = true;
     }
   }
- 
-  //super hacky :(
-  disableValueButtons(itemId) {
-    if (this.itemId == "Independence") {
-      this.btnClicked = true;
 
-    }
-  }
+  // checkNumberOfItemsSelected(itemSelection) {
+  //   if (this.itemSelection.length > 3) {
+  //     alert('Too many values chosen. Please RESET');
+  //   } if (this.itemSelection.length < 3) {
+  //     alert('Please choose THREE values');
+  //   } else this.checkedNumber = true;
+  // }
 
-  checkNumberOfItemsSelected(itemSelection) {
-    if (this.itemSelection.length > 3) {
-      alert('Too many values chosen. Please RESET');
-    } if (this.itemSelection.length < 3) {
-      alert('Please choose THREE values');
-    } else this.checkedNumber = true;
-  }
-
-  checkIfValidOptions(itemSelection) {
-    if (this.itemSelection[0] == this.itemSelection[1]) {
-      alert('Please RESET and choose three DIFFERENT values');
-    } else if (this.itemSelection[0] == this.itemSelection[2]) {
-      alert('Please RESET and choose three DIFFERENT values');
-    }else if (this.itemSelection[1] == this.itemSelection[2]) {
-      alert('Please RESET and choose three DIFFERENT values');
-    } else if (this.itemSelection[0] == this.itemSelection[1] && (this.itemSelection[0] == this.itemSelection[2]) && (this.itemSelection[1] == this.itemSelection[2])) {
-      alert('Please RESET and choose three DIFFERENT values');
-    }
-  }
+  // checkIfValidOptions(itemSelection) {
+  //   if (this.itemSelection[0] == this.itemSelection[1]) {
+  //     alert('Please RESET and choose three DIFFERENT values');
+  //   } else if (this.itemSelection[0] == this.itemSelection[2]) {
+  //     alert('Please RESET and choose three DIFFERENT values');
+  //   }else if (this.itemSelection[1] == this.itemSelection[2]) {
+  //     alert('Please RESET and choose three DIFFERENT values');
+  //   } else if (this.itemSelection[0] == this.itemSelection[1] && (this.itemSelection[0] == this.itemSelection[2]) && (this.itemSelection[1] == this.itemSelection[2])) {
+  //     alert('Please RESET and choose three DIFFERENT values');
+  //   }
+  // }
 
   resetQuiz() {
     this.isSelected = false;
     this.checkedNumber = false;
     this.itemSelection = [];
+    this.Independence = true;
+    this.Contribution = true;
+    this.Spirituality = true;
+    this.Enjoyment = true;
+    this.Education = true;
+    this.Security = true;
+    this.Creativity = true;
+    this.Connection  = true;
+    this.Adventure = true;
+    this.Knowledge = true;
+    this.Determination = true;
+    this.Simplicity = true;
   }
 
   navigateToArchetype(archetypeResult) {
@@ -125,8 +183,8 @@ export class QuizPageComponent implements OnInit {
   showMeResult(itemSelection) {
     var results = this.itemSelection;
     console.log(results);
-    this.checkNumberOfItemsSelected(results);
-    this.checkIfValidOptions(results);    
+    // this.checkNumberOfItemsSelected(results);
+    // this.checkIfValidOptions(results);    
     var datas = this.archetypeData;
     for (let data in datas) {
       if(results[0]==datas[data]["First Value"]&&results[1]==datas[data]["Second Value"]&&results[2]==datas[data]["Third Value"]) {

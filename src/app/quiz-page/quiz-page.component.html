@@ -1,29 +1,102 @@
 <div class="container">
   <div class="archetype-seeker"><img src="assets/images/archetype-seeker.png" alt="archetype-seeker"></div>
   <div class="top3values"><img src="assets/images/top3values.png" alt="top3values"></div>
-
   <div class="col-sm-12 archetype-wrapper">
       <div class="row">
-          <div class="col-sm-2" (click)="selectItem($event)"><img src="assets/images/independence_off.png" id="Independence" alt="independence"></div>
+
+          <!-- Independence -->
+          <div class="col-sm-2" (click)="selectItem($event)" *ngIf="Independence">
+            <img src="assets/images/independence_off.png" id="Independence" alt="independence">
+          </div>
+          <div class="col-sm-2" *ngIf="!Independence">
+            <img src="assets/images/independence_on.png">
+          </div>
+
+          <!-- Contribution -->
+          <div class="col-sm-2" (click)="selectItem($event)" *ngIf="Contribution">
+            <img src="assets/images/contribution_off.png" id="Contribution" alt="contribution">
+          </div>
+          <div class="col-sm-2" *ngIf="!Contribution">
+            <img src="assets/images/contribution_on.png">
+          </div>
+
+          <!-- Spirituality -->
+          <div class="col-sm-2" (click)="selectItem($event)" *ngIf="Spirituality">
+            <img src="assets/images/spirit_off.png" id="Spirituality" alt="spirituality">
+          </div>
+          <div class="col-sm-2" *ngIf="!Spirituality">
+              <img src="assets/images/spirit_on.png" id="Spirituality" alt="spirituality">
+          </div>
           
-          
-          <div class="col-sm-2" (click)="selectItem($event)"><img src="assets/images/contribution_off.png" id="Contribution" alt="contribution"></div>
-          <div class="col-sm-2" (click)="selectItem($event)"><img src="assets/images/spirit_off.png" id="Spirituality" alt="spirituality"></div>
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/enjoyment_off.png" id="Enjoyment" alt="enjoyment"></div>
+          <!-- Enjoyment -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Enjoyment">
+            <img src="assets/images/enjoyment_off.png" id="Enjoyment" alt="enjoyment">
+          </div>
+          <div class="col-sm-2" *ngIf="!Enjoyment">
+              <img src="assets/images/enjoyment_on.png" id="Enjoyment" alt="enjoyment">
+            </div>
         </div>
 
         <div class="row">
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/education_off.png" id="Education" alt="education"></div>
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/security_off.png" id="Security" alt="security"></div>
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/creativity_off.png" id="Creativity" alt="creativity"></div>
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/connection_off.png" id="Connection" alt="connection"></div>
+            <!-- Education -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Education">
+            <img src="assets/images/education_off.png" id="Education" alt="education">
+          </div>
+          <div class="col-sm-2" *ngIf="!Education">
+              <img src="assets/images/education_on.png" id="Education" alt="education">
+          </div>
+          <!-- Security -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Security">
+            <img src="assets/images/security_off.png" id="Security" alt="security">
+          </div>
+          <div class="col-sm-2" *ngIf="!Security">
+              <img src="assets/images/security_on.png" id="Security" alt="security">
+          </div>
+          <!-- Creativity -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Creativity">
+            <img src="assets/images/creativity_off.png" id="Creativity" alt="creativity">
+          </div>
+          <div class="col-sm-2" *ngIf="!Creativity">
+              <img src="assets/images/creativity_on.png" id="Creativity" alt="creativity">
+          </div>
+          <!-- Connection -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Connection">
+            <img src="assets/images/connection_off.png" id="Connection" alt="connection">
+          </div>
+          <div class="col-sm-2" *ngIf="!Connection">
+              <img src="assets/images/connection_on.png" id="Connection" alt="connection">
+          </div>
         </div>
 
         <div class="row">
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/adventure_off.png" id="Adventure" alt="adventure"></div>
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/knowledge_off.png" id="Knowledge" alt="knowledge"></div>
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/determination_off.png" id="Determination" alt="determination"></div>
-          <div class="col-sm-2" (click)=selectItem($event)><img src="assets/images/simplicity_off.png" id="Simplicity" alt="simplicity"></div>
+          <!-- Adventure -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Adventure">
+            <img src="assets/images/adventure_off.png" id="Adventure" alt="adventure">
+          </div>
+          <div class="col-sm-2" *ngIf="!Adventure">
+              <img src="assets/images/adventure_on.png" id="Adventure" alt="adventure">
+          </div>
+          <!-- Knowledge -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Knowledge">
+            <img src="assets/images/knowledge_off.png" id="Knowledge" alt="knowledge">
+          </div>
+          <div class="col-sm-2" *ngIf="!Knowledge">
+              <img src="assets/images/knowledge_on.png" id="Knowledge" alt="knowledge">
+            </div>
+          <!-- Determination -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Determination">
+            <img src="assets/images/determination_off.png" id="Determination" alt="determination">
+          </div>
+          <div class="col-sm-2" *ngIf="!Determination">
+              <img src="assets/images/determination_on.png" id="Determination" alt="determination">
+          </div>
+          <!-- Simplicity -->
+          <div class="col-sm-2" (click)=selectItem($event) *ngIf="Simplicity">
+            <img src="assets/images/simplicity_off.png" id="Simplicity" alt="simplicity">
+          </div>
+          <div class="col-sm-2" *ngIf="!Simplicity">
+              <img src="assets/images/simplicity_on.png" id="Simplicity" alt="simplicity">
+            </div>
         </div>
   </div>
   <div class="row">

@@ -1,5 +1,5 @@
 .archetype-seeker{
-    margin-top: 5%;
+    margin-top: 6.5%;
     margin-left:23%;
     margin-bottom: 2%;
 }
@@ -31,3 +31,9 @@
 #recycle {
     margin-left: 15%;
 }
+
+
+.container {
+    background-image: url('../../assets/images/pattern.png');
+}
+

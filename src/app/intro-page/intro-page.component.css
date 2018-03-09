@@ -3,7 +3,6 @@
 }
 
 .type {
-    margin-top: 20%;
     margin-bottom: 5%;
     padding-top: 20px;
 }
@@ -12,6 +11,10 @@
     margin-top: 25%;
 }
 
-.begin-btn {
-    margin-left:
+.container {
+    padding-top: 20%;
+    background-image: url('../../assets/images/pattern.png');
+    margin: 0;
+    height: 100%;
+    width: 100%
 }
