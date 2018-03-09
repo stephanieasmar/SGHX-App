@@ -159,8 +159,8 @@ export class QuizPageComponent implements OnInit {
     this.Simplicity = true;
   }
 
-  navigateToArchetype(archetypeResult) {
-    console.log(archetypeResult);
+  navigationDecision(archetypeResult) {
+
     if (this.archetypeResult == 'Rule Breaker') {
       this.router.navigate(['archetype-seeker/rule-breaker']);   
     } else if (this.archetypeResult == 'Perpetual Dreamer') {
@@ -175,10 +175,19 @@ export class QuizPageComponent implements OnInit {
       this.router.navigate(['archetype-seeker/insights-gatherer']);  
     } else if (this.archetypeResult == 'Social Connector') {
       this.router.navigate(['archetype-seeker/social-connector']);  
-    } else {
-      alert('Error. Please RESET and begin again');
     }
+
   }
+
+  navigateToArchetype(archetypeResult) {
+  this.router.navigate(['/archetype-seeker/loading']);
+   setTimeout( () => {
+    this.navigationDecision(archetypeResult)
+   }, 1000);
+  }
+
+
+
 
   showMeResult(itemSelection) {
     var results = this.itemSelection;

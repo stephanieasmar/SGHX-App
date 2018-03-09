@@ -24,7 +24,7 @@ import {ActivatedRoute} from "@angular/router";
   </div>
   </div>
   `,
-  styles: ['.container { background-image: url(../../assets/images/pattern.png); margin: 0; padding: 0; width: 100%; height: 100%}', '.result { padding-left: 5%; }', '.archetype { margin-top: 10%; }', '.youare { margin-top: 15%; margin-left: 30% }', '.restart { margin-left: 90% ; margin-top: 2% }', '.copy { margin-top: 27.5% }']
+  styles: ['.container { background-image: url(../../assets/images/pattern.png); margin: 0; padding: 0; width: 1024px; height: 768px', '.result { padding-left: 5%; }', '.archetype { margin-top: 10%; }', '.youare { margin-top: 15%; margin-left: 30% }', '.restart { margin-left: 90% ; margin-top: 2% }', '.copy { margin-top: 27.5% }']
 })
 export class RuleBreakerComponent {
   title = 'Rule Breaker';
