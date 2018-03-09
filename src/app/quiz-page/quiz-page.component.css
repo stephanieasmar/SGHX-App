@@ -1,28 +1,41 @@
 .archetype-seeker{
-    margin-top: 5%;
-    margin-left: 2%;
+    margin-left: 23%;
     margin-bottom: 2%;
 }
 
 .top3values {
     margin-bottom: 5%;
-    margin-left: 2%;
+    margin-left: 15%;
 }
 
 .archetype-wrapper {
-    margin-left: 6%;
+    margin-left: 8.5%;
 }
 
 .reset {
     margin-top: 3%;
-    margin-left: 17.5%;
+    margin-left: %;
 }
 
 .show-me {
     margin-top: 3%;
+    margin-left: 30%;
 }
 
 .col-sm-2 {
     margin-right: 5%;
     margin-bottom: 1%
 }
+
+#recycle {
+    margin-left: 15%;
+}
+
+
+.container {
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 6.5%;
+    background-image: url('../../assets/images/pattern.png');
+}
+

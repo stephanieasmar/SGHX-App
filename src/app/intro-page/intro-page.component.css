@@ -3,23 +3,18 @@
 }
 
 .type {
-    margin-top: 10%;
-    margin-bottom: 3%;
-    width: 400px;
+    margin-bottom: 5%;
     padding-top: 20px;
 }
 
-.line {
-    margin-top: 10%;
-    margin-bottom: 3%;
-    padding: 0;
-    margin-left: 15%;
-}
-
-.line img {
-    float: right;
-}
-
 .logo {
-    margin-top: 5%;
+    margin-top: 25%;
+}
+
+.container {
+    padding-top: 20%;
+    background-image: url('../../assets/images/pattern.png');
+    margin: 0;
+    height: 100%;
+    width: 100%
 }

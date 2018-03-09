@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { NgIf, CommonModule } from '@angular/common';
 import { Component} from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 //components
 import { AppComponent } from './app.component';
@@ -13,13 +14,16 @@ import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
 
 //archetype Components
-import { RuleBreakerComponent } from './archetype-results/rule-breaker/rule-breaker.component';
-import { PerpetualDreamerComponent } from './archetype-results/perpetual-dreamer/perpetual-dreamer.component';
-import { TeamMotivatorComponent } from './archetype-results/team-motivator/team-motivator.component';
-import { RuleFollowerComponent } from './archetype-results/rule-follower/rule-follower.component';
-import { ComfortSeekerComponent } from './archetype-results/comfort-seeker/comfort-seeker.component';
-import { InsightsGathererComponent } from './archetype-results/insights-gatherer/insights-gatherer.component';
-import { SocialConnectorComponent } from './archetype-results/social-connector/social-connector.component';
+import { RuleBreakerComponent } from './archetype-results/rule-breaker.component';
+import { PerpetualDreamerComponent } from './archetype-results/perpetual-dreamer.component';
+import { TeamMotivatorComponent } from './archetype-results/team-motivator.component';
+import { RuleFollowerComponent } from './archetype-results/rule-follower.component';
+import { ComfortSeekerComponent } from './archetype-results/comfort-seeker.component';
+import { InsightsGathererComponent } from './archetype-results/insights-gatherer.component';
+import { SocialConnectorComponent } from './archetype-results/social-connector.component';
+
+//Loading Screen
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 
 //services
 import { ArchetypeService } from './archetype.service';
@@ -49,7 +53,8 @@ const appRoutes: Routes = [
     RuleFollowerComponent,
     ComfortSeekerComponent,
     InsightsGathererComponent,
-    SocialConnectorComponent
+    SocialConnectorComponent,
+    LoadingScreenComponent
 
   ],
   imports: [
@@ -60,6 +65,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     HttpModule,
+    CommonModule
   ],
   providers: [ArchetypeService],
   bootstrap: [AppComponent]
