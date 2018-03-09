@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
     </div>
   </div>
   `,
-  styles: ['.container { background-color: white }', '.logo { margin-top: 35%; margin-left: 40% }', '.copy { font-weight: bold; margin-left: 42% }']
+  styles: ['.container { background-color: white }', '.logo { margin-top: 35%; margin-left: 45% }', '.copy { font-weight: bold; margin-left: 45% }']
 })
 
 export class LoadingScreenComponent {
