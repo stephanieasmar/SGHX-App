@@ -183,7 +183,7 @@ export class QuizPageComponent implements OnInit {
   this.router.navigate(['/archetype-seeker/loading']);
    setTimeout( () => {
     this.navigationDecision(archetypeResult)
-   }, 10000);
+   }, 1000);
   }
 
 
