@@ -1,6 +1,5 @@
 .archetype-seeker{
-    margin-top: 6.5%;
-    margin-left:23%;
+    margin-left: 23%;
     margin-bottom: 2%;
 }
 
@@ -34,6 +33,9 @@
 
 
 .container {
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 6.5%;
     background-image: url('../../assets/images/pattern.png');
 }
 

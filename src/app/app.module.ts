@@ -22,6 +22,9 @@ import { ComfortSeekerComponent } from './archetype-results/comfort-seeker.compo
 import { InsightsGathererComponent } from './archetype-results/insights-gatherer.component';
 import { SocialConnectorComponent } from './archetype-results/social-connector.component';
 
+//Loading Screen
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
+
 //services
 import { ArchetypeService } from './archetype.service';
 
@@ -50,7 +53,8 @@ const appRoutes: Routes = [
     RuleFollowerComponent,
     ComfortSeekerComponent,
     InsightsGathererComponent,
-    SocialConnectorComponent
+    SocialConnectorComponent,
+    LoadingScreenComponent
 
   ],
   imports: [
