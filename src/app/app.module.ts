@@ -38,7 +38,9 @@ const appRoutes: Routes = [
   { path: 'archetype-seeker/rule-follower', component: RuleFollowerComponent  },
   { path: 'archetype-seeker/comfort-seeker', component: ComfortSeekerComponent },
   { path: 'archetype-seeker/insights-gatherer', component: InsightsGathererComponent },
-  { path: 'archetype-seeker/social-connector', component: SocialConnectorComponent }
+  { path: 'archetype-seeker/social-connector', component: SocialConnectorComponent },
+
+  { path: 'archetype-seeker/loading', component: LoadingScreenComponent }
 ];
 
 
@@ -60,7 +62,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      {enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule,
     HttpClientModule,

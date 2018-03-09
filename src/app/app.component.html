@@ -1,7 +1,9 @@
-<div class="loading-overlay" *ngIf="loading">
-    <loading-screen></loading-screen>
+<div class="app-layout">
+    <div [hidden]="!loading" class="loading">
+        <loading-screen></loading-screen>
+    </div>
+    <div [hidden]="loading" class="router-output">
+      <router-outlet></router-outlet>
+    </div>
 </div>
-<router-outlet></router-outlet>
-
-
 
