@@ -59,7 +59,7 @@ export class QuizPageComponent implements OnInit {
   };
 
   ngOnInit() {
-    this._archetypeService.getJSONDataAsync('../assets/data/archetypes.json').then(data => {
+    this._archetypeService.getJSONDataAsync('../s2/assets/data/archetypes.json').then(data => {
       this.setQueryOptionsData(data);
     });
   }

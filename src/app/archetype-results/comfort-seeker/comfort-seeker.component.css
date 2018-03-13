@@ -7,7 +7,7 @@
 }
 
 .result {
-     padding-left: 5%; 
+     padding-left: 6%; 
 }
 
 .archetype { 
@@ -15,14 +15,14 @@
 }
 
 .youare {
-     margin-top: 15%; margin-left: 30% 
+     margin-top: 10%; margin-left: 30% 
 }
 
 .restart { 
-    margin-left: 90%;
-    margin-top: 2% 
+    margin-left: 87.5%;
 }
 
 .copy {
-    margin-top: 27.5% 
+    margin-top: 25%;
+    padding-left: 5%; 
 }
