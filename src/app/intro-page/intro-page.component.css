@@ -17,4 +17,5 @@
     margin: 0;
     height: 768px;
     width: 1024px;
+    overflow: hidden;
 }

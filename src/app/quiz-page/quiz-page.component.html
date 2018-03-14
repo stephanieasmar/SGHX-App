@@ -2,8 +2,8 @@
   <div class="archetype-seeker"><img src="assets/images/archetype-seeker.png" alt="archetype-seeker"></div>
   <div class="top3values"><img src="assets/images/top3values.png" alt="top3values"></div>
   <div class="col-sm-12 archetype-wrapper">
+      <div class="topline"></div>
       <div class="row">
-
           <!-- Independence -->
           <div class="col-sm-2" (click)="selectItem($event)" *ngIf="Independence">
             <img src="assets/images/independence_off.png" id="Independence" alt="independence">
@@ -37,6 +37,7 @@
             </div>
         </div>
 
+        
         <div class="row">
             <!-- Education -->
           <div class="col-sm-2" (click)=selectItem($event) *ngIf="Education">
@@ -68,6 +69,7 @@
           </div>
         </div>
 
+        <div class="midline"></div>
         <div class="row">
           <!-- Adventure -->
           <div class="col-sm-2" (click)=selectItem($event) *ngIf="Adventure">
@@ -98,6 +100,7 @@
               <img src="assets/images/simplicity_on.png" id="Simplicity" alt="simplicity">
             </div>
         </div>
+        <div class="bottomline"></div>
   </div>
   <div class="row">
     <div class="col-sm-1 reset" (click)=resetQuiz()>
