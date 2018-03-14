@@ -13,8 +13,8 @@
 }
 
 .reset {
-    margin-top: 3%;
-    margin-left: %;
+    margin-top: 1%;
+    margin-left: 1%;
 }
 
 .show-me {
@@ -37,7 +37,7 @@
     width: 1024px;
     margin: 0;
     padding-left: 5%;
-    padding-top: 3%;
+    padding-top: 6%;
     background-image: url('../../assets/images/pattern.png');
     overflow: hidden;
 }

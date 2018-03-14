@@ -1,12 +1,29 @@
-.container { background-image: url(../../../assets/images/pattern.png); 
+.container { 
+    background-image: url(../../../assets/images/pattern.png); 
     margin: 0; 
     padding: 0; 
     width: 1024px; 
-    height: 768px; 
+    height: 768px;
     overflow: hidden;
 }
-.result { padding-left: 6%; }
-.archetype { margin-top: 10%; }
-.youare { margin-top: 10%; margin-left: 30% }
-.restart { margin-left: 87.5%; }
-.copy { margin-top: 25%; padding-left: 5%;  }
+
+.result {
+     padding-left: 7%; 
+}
+
+.archetype { 
+    margin-top: 10%; 
+}
+
+.youare {
+     margin-top: 17%; margin-left: 31% 
+}
+
+.restart { 
+    margin-left: 86%;
+}
+
+.copy {
+    margin-top: 30%;
+    padding-left: 4%; 
+}

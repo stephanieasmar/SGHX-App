@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
     </div>
   </div>
   `,
-  styles: ['.container { background-image: url(../../assets/images/tint.png); padding-top: 25%; margin: 0; width: 1024px; height: 768px}', '.logo {margin-left: 45%; margin-bottom: 2%}', '.loading { margin-left: 45% }']
+  styles: ['.container { background-color: lightgrey; padding-top: 30%; margin: 0; width: 1024px; height: 768px}', '.logo {margin-left: 45%; margin-bottom: 2%}', '.loading { margin-left: 45% }']
 })
 
 export class LoadingScreenComponent {

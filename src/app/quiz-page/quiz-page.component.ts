@@ -23,39 +23,21 @@ export class QuizPageComponent implements OnInit {
   resultReturned: boolean;
   checkedNumber: boolean
   isSelected: boolean;
-  IndependenceOff: boolean;
-  IndependenceOn: boolean;
-  ContributionOff: boolean;
-  ContributionOn: boolean;
-  Independence: boolean;
-  Contribution: boolean;
-  Spirituality: boolean;
-  Enjoyment: boolean;
-  Education: boolean;
-  Security: boolean;
-  Creativity: boolean;
-  Connection: boolean;
-  Adventure: boolean;
-  Knowledge: boolean;
-  Determination: boolean;
-  Simplicity: boolean;
+  Independence: boolean = true;
+  Contribution: boolean = true;
+  Spirituality: boolean = true;
+  Enjoyment: boolean = true;
+  Education: boolean = true;
+  Security: boolean = true;
+  Creativity: boolean = true;
+  Connection: boolean = true;
+  Adventure: boolean = true;
+  Knowledge: boolean = true;
+  Determination: boolean = true;
+  Simplicity: boolean = true;
 
   constructor(private _archetypeService: ArchetypeService, private route: ActivatedRoute, private router: Router) {
-    this.isSelected = false;
-    this.checkedNumber = false;
-    this.resultReturned = false;
-    this.Independence = true;
-    this.Contribution = true;
-    this.Spirituality = true;
-    this.Enjoyment = true;
-    this.Education = true;
-    this.Security = true;
-    this.Creativity = true;
-    this.Connection  = true;
-    this.Adventure = true;
-    this.Knowledge = true;
-    this.Determination = true;
-    this.Simplicity = true;
+
   };
 
   ngOnInit() {
@@ -80,31 +62,59 @@ export class QuizPageComponent implements OnInit {
   }
 
   disableValueButtons(itemId) {
-    if (this.itemId == "Independence") {
-      this.Independence = false;
-    } else if(this.itemId == "Contribution") {
-      this.Contribution = false;
-    } else if(this.itemId == "Spirituality") {
-      this.Spirituality = false;
-    } else if(this.itemId == "Enjoyment") {
-      this.Enjoyment = false;
-    } else if(this.itemId == "Education") {
-      this.Education = false;
-    } else if(this.itemId == "Security") {
-      this.Security = false;
-    } else if(this.itemId == "Creativity") {
-      this.Creativity = false;
-    } else if(this.itemId == "Connection") {
-      this.Connection = false;
-    } else if(this.itemId == "Adventure") {
-      this.Adventure = false;
-    } else if(this.itemId == "Knowledge") {
-      this.Knowledge = false;
-    } else if(this.itemId == "Determination") {
-      this.Determination = false;
-    } else if(this.itemId == "Simplicity") {
-      this.Simplicity = false;
-    } 
+    if (this.itemSelection.length < 3) {
+      if (this.itemId == "Independence") {
+        this.Independence = false;
+      } else if(this.itemId == "Contribution") {
+        this.Contribution = false;
+      } else if(this.itemId == "Spirituality") {
+        this.Spirituality = false;
+      } else if(this.itemId == "Enjoyment") {
+        this.Enjoyment = false;
+      } else if(this.itemId == "Education") {
+        this.Education = false;
+      } else if(this.itemId == "Security") {
+        this.Security = false;
+      } else if(this.itemId == "Creativity") {
+        this.Creativity = false;
+      } else if(this.itemId == "Connection") {
+        this.Connection = false;
+      } else if(this.itemId == "Adventure") {
+        this.Adventure = false;
+      } else if(this.itemId == "Knowledge") {
+        this.Knowledge = false;
+      } else if(this.itemId == "Determination") {
+        this.Determination = false;
+      } else if(this.itemId == "Simplicity") {
+        this.Simplicity = false;
+      } 
+    } else  {
+      if (this.itemId == "Independence") {
+        this.Independence = true;
+      } else if(this.itemId == "Contribution") {
+        this.Contribution = true;
+      } else if(this.itemId == "Spirituality") {
+        this.Spirituality = true;
+      } else if(this.itemId == "Enjoyment") {
+        this.Enjoyment = true;
+      } else if(this.itemId == "Education") {
+        this.Education = true;
+      } else if(this.itemId == "Security") {
+        this.Security = true;
+      } else if(this.itemId == "Creativity") {
+        this.Creativity = true;
+      } else if(this.itemId == "Connection") {
+        this.Connection = true;
+      } else if(this.itemId == "Adventure") {
+        this.Adventure = true;
+      } else if(this.itemId == "Knowledge") {
+        this.Knowledge = true;
+      } else if(this.itemId == "Determination") {
+        this.Determination = true;
+      } else if(this.itemId == "Simplicity") {
+        this.Simplicity = true;
+      } 
+    }
   }
     
   createItemArray(itemId) {
