@@ -39,5 +39,50 @@
     padding-left: 5%;
     padding-top: 3%;
     background-image: url('../../assets/images/pattern.png');
+    overflow: hidden;
+}
+
+.topline {
+    position: absolute;
+    border: 1px dashed lightgrey;
+    width: 625px;
+    height: 150px;
+    margin-left: 70px;
+    margin-top: 65px;
+    z-index: -100;
+
+
+
+}
+
+.midline{ 
+    position: absolute;
+    border-left: 1px dashed lightgrey;
+    border-right: 1px dashed lightgrey;
+    border-bottom: none;
+    border-top: 1px dashed lightgrey;
+    width: 210px;
+    height: 300px;
+    margin-left: 275px;
+    margin-top: -230px;
+    z-index: -100;
+    
+
+
+}
+
+.bottomline{ 
+    position: absolute;
+    border-left: 1px dashed lightgrey;
+    border-right: 1px dashed lightgrey;
+    border-bottom: 1px dashed lightgrey;
+    border-top: none;
+    width: 625px;
+    height: 150px;
+    margin-left: 70px;
+    margin-top: -230px;
+    z-index: -100;
+
+
 }
 
