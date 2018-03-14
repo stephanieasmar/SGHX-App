@@ -4,7 +4,7 @@
 }
 
 .top3values {
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     margin-left: 15%;
 }
 
@@ -13,12 +13,12 @@
 }
 
 .reset {
-    margin-top: 1%;
+    margin-top: 2%;
     margin-left: 1%;
 }
 
 .show-me {
-    margin-top: 3%;
+    margin-top: 2%;
     margin-left: 30%;
 }
 
@@ -44,7 +44,7 @@
 
 .topline {
     position: absolute;
-    border: 1px dashed lightgrey;
+    border: 1px dashed grey;
     width: 625px;
     height: 150px;
     margin-left: 70px;
@@ -57,10 +57,10 @@
 
 .midline{ 
     position: absolute;
-    border-left: 1px dashed lightgrey;
-    border-right: 1px dashed lightgrey;
+    border-left: 1px dashed grey;
+    border-right: 1px dashed grey;
     border-bottom: none;
-    border-top: 1px dashed lightgrey;
+    border-top: 1px dashed grey;
     width: 210px;
     height: 300px;
     margin-left: 275px;
@@ -73,9 +73,9 @@
 
 .bottomline{ 
     position: absolute;
-    border-left: 1px dashed lightgrey;
-    border-right: 1px dashed lightgrey;
-    border-bottom: 1px dashed lightgrey;
+    border-left: 1px dashed grey;
+    border-right: 1px dashed grey;
+    border-bottom: 1px dashed grey;
     border-top: none;
     width: 625px;
     height: 150px;
